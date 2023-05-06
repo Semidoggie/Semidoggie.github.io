@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Doggy&#39;s blog</title>
+  
+  <subtitle>present</subtitle>
+  <link href="https://sqydoggy.top/atom.xml" rel="self"/>
+  
+  <link href="https://sqydoggy.top/"/>
+  <updated>2023-04-18T11:14:31.703Z</updated>
+  <id>https://sqydoggy.top/</id>
+  
+  <author>
+    <name>Doggy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>电路问题_2</title>
+    <link href="https://sqydoggy.top/2023/04/18/Demo-2/"/>
+    <id>https://sqydoggy.top/2023/04/18/Demo-2/</id>
+    <published>2023-04-18T11:13:12.000Z</published>
+    <updated>2023-04-18T11:14:31.703Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+    
+    
+    <summary type="html">大概是振荡器吧</summary>
+    
+    
+    
+    <category term="Maybe study" scheme="https://sqydoggy.top/categories/Maybe-study/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>电路问题_1</title>
+    <link href="https://sqydoggy.top/2023/04/02/Demo-1/"/>
+    <id>https://sqydoggy.top/2023/04/02/Demo-1/</id>
+    <published>2023-04-02T07:14:17.000Z</published>
+    <updated>2023-04-04T14:06:37.626Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="浅浅记录一下"><a href="#浅浅记录一下" class="headerlink" title="浅浅记录一下"></a>浅浅记录一下</h1><h2 id="背景（原因"><a href="#背景（原因" class="headerlink" title="背景（原因"></a>背景（原因</h2><p>大概在周一（2023.3.27）上了个微波固态电路的课，主要是讲高频电子线路的一个课程吧算是，当时正在讲Amplifier，提到了一个自激问题，有感而发</p><h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><p>首先先提一下这些放大器的一些参数，尤其 $ S_{11} $ $ S_{12} $ $ S_{21} $ 这些还有常说的反射系数等等，最后有一个结论性的公式，这边放在下边：</p><blockquote><p> $$ Γ_{in}&#x3D;S_{11}+\frac{S_{12}S_{21}Γ_{L}}{1-S_{22}Γ_{L}} $$ </p><p> $$ Γ_{out}&#x3D;S_{22}+\frac{S_{12}S_{21}Γ_{S}}{1-S_{11}Γ_{S}} $$ </p></blockquote><p>即当 $ |Γ_{in}| &gt; 1 $ 此时不稳定，即入射波不断反射叠加最后形成自激，比较便捷快速的解决办法即在输出端加一电阻R，使得 $ S_{12} $ 和 $ S_{21} $ 的值降低，即可使对应的 $ Γ_{in}&lt;1 $ </p><p>这里再补充一个稳定性系数公式，如果是做题或者设计需要可以借用判断，当K&gt;1稳定，K&lt;1潜在不稳定，个人认为依旧可以利用上述方法进行判断：</p><blockquote><p>$$ K&#x3D;\frac{1-|S_{11}|^2-|S_{22}|^2-|Δ|^2}{2|S_{12}S_{21}|} $$</p></blockquote><p>这个东西感触深的原因之一就是在大一时候看到的《你好，放大器》一书中的128页曾提到过放大器自激振荡的效应，其中一个解决办法就是外加电阻解决，想来有相似性，便记下这篇</p><p>对于运算放大器来说自激的原因有以下三点</p><ol><li>电路设计不对，环路增益 $ A_{uo}F $ 过大，即闭环增益 $ \frac{1}{F} $ 太小，运放本身不支持太小的。</li><li>输出接驱动大电容。输出大电容会和运放内部输出电阻形成低通网络，会附加0~90°相移。电容越大，同频率下越容易使环路达到180°相移，从而产生自激振荡</li><li>引入杂散电容</li></ol><p>以上究其根本原因都是环路增益大于1下，环路的相移达到了180°，负反馈变成正反馈，信号在环路内不断增大。</p>]]></content>
+    
+    
+    <summary type="html">maybe上课一些感想</summary>
+    
+    
+    
+    <category term="Maybe study" scheme="https://sqydoggy.top/categories/Maybe-study/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一些记录</title>
+    <link href="https://sqydoggy.top/2022/12/16/Life/"/>
+    <id>https://sqydoggy.top/2022/12/16/Life/</id>
+    <published>2022-12-15T18:31:50.000Z</published>
+    <updated>2022-10-29T18:31:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="9c3fbd0ea71571ae5adeb6f33d071d530f0e475a965e6be16207c4d6ed1bac01">27c47edace0eba4d69ee591a69ca344275960a5bd49813f53452bc87241312dce733b52c35372a5158772b1038cc1a783baa4deef3a82eda9be286b51f142bf13f376146d29e3f755ee5138af55e261b003d2c7ce9e07b6473755cffa9732f397ecbf9829313c43174f0d5e17f4852bba3f6b2a18f30e280b02199c5da22a2d4da190f1a10a8073051fcb77cac2e7cf11e6fe1f63c02f4d28a7c126a31525d25bafa43d418d7ec53e46ed3be945a976fa87919bcbe0f1d758f13340e60f69423147c5efe81e681cd8b8c4e2567090ce60cd18847314cbbed2264ed63831977ec32c65c0c1e751a07ee5b793d463cec64f1b853e6701d53ac3fa432d75f6fba8daea56679718d6485087931e06d85665b6972d9e42913f3d092456fe8f0fa6bd53eebb9f1770afe155da7ff9e01454269a188caf6fc89deb83542d0973f0f6c2317837da03b5ba81a67cb9ffd5b04685df87380f497247ee8424f355b53f454c5aaa52c30b6bbf349952fc71acd35c2f7ec31c797595857166514419d4c0932976a334d468911390b15d04e465910264fd3055336412f2d7896f07b5ae03a3283fe3745be66a1ec13b08bc1358cecfdf314dd04c84c19221b173847dd9c249ec5037988a53dd41f66990c3bc94f855558f3d0c7b0f5a8c9689f57119c4e3be73efe91e64e75d2887c493ac1e5ae721e585925dfbdbb23d1e935f2fdcd7d80d1980bd8cfe54e3b4aa36a4d3527a8ec226993d0cdc0caace308b87dac0578ae5eaf95d02e9cfe284efb7e18c6e3720440ada1de1aa956600ad7c48074c804d9240a70571fb30b38a40c3ce6595cdd7f6cd3a4e0ba4b419ce569bda7ecb9666d76df6308dd1936ed465a09e6fa00d2ee131226642ebb1d370597a14c69f62667290bc9d92fbbf24956ea56ee0301136103eab812986bf21559b4c475b7e1d8c43832793db0b0075bdb88aa617224155f07dc4c3932caebad20a4f38c46a6f22d326f2c387ef2f0d1c2ef923afe4605ddd7dd66e21617a4ef2bf1f941927c7c3982396f938880d8c6570e24cf94c9f899c11a13c9f9174563dd8ec0aeda90f9e14b03e54e26f1469c15ad263fd64325a4fb4b4978a116f03f50c7852dae7f9adc256c025618d6ea10ba36ddc3756d70fbad19f82f3597622c19c8949c459c0fb477955f6f124dcfa17ff2805d21b9b0540529f361ac0754b908361b66c870ddb10d368bd5a9cdf65a9bddcfb8b41e323c7edc6977a42943a460400a5ea276a0c05f223b6e67ada4bae02797d0dd00312f47895f1d972066fbd8a837c0429a77ae232539692c8b5e6cae4284b26b401397f25c479dda5ca9b7ae43338f4dc06b6f4a672c594c50e9e0624649d45368278d39d2e93e5581a06b669f4f52bbbe3350c673eeaf8780974fd1f5195840e266a8ef064e2c3099d6f565f16847cd1d6fda601d3870676e1f1ff03d1c6bde42803eea9ba39e44fdb0ca235c038fb28e8c58079cafb96947bf3b68ab0fc49c53be1bec37e2316fcb04503c176911c1c6a2c41e7c4b9579fea7398497048e38119fcde06efaa09be9e6943b7a19dd39616cb8907304ba02a1740edffb79706c885e0e45d9a8a4512a8068ef3362fcece08a61fe304480d80cc0da906db62fda8239356b11ab961432ac36dbd0153b3132c56696ead690d8f0cd90f41325c61ee30b5b7a42716a47bec8319c767f5daed28b64f5592e1bc1724919eae0fd097365683747e27645239cb6fa00d47f77583a2d3cf9b90663730217ac2b34671f98a0e94f70a6c672673593329ae287859bf52111d6b427ee031e7ba1fba27905b012314027067e8a67866bc0010636582445b820a8df09a0dd28627797f316029c1b6a418df1c97bda19ce5986166e0e524afcdc19774650c845f256bea3ccc0449cffc3ae753fd64cace14ee738e966f2ec53aa17d23c396bbdb7201094d96b454a93110da24ed04db18695ada267358ecc6e1f46b49826a365722cf11065a12e2b4198cbd2c075979dea0f2e7a2f980df12c0e448645fb7ad7604bc35fdeb5c0e0c1ead1bb60ec07658a6d1a1ec28280b949f71c73eed464194e39940d69319d75e3447b923a43c8a1d9abe7703d9dd4882fe9c17bc4819478f557def76a4ccce0b357505ddb5cd2277da33425e9cf30ca784d800fbbdd035defa54aa1f054ca25d45811d99c329697a1aa727e02e6855f96e129b0a61cbc128f400bcdc69a293232d9c762516cefcedb4c2e7b92ddf6fa214cb79893c35758c228931bf2eab13e926c7a7fce3c9ca1132ce34dd813f95c0df9d8b4</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-xray">      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">我的名字+农历生日 例：ls020202 （李四02年二月初二.</span>      </label>      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>      </svg>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    
+    <category term="作为日记加密" scheme="https://sqydoggy.top/tags/%E4%BD%9C%E4%B8%BA%E6%97%A5%E8%AE%B0%E5%8A%A0%E5%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第一篇文章</title>
+    <link href="https://sqydoggy.top/2022/10/30/Test/"/>
+    <id>https://sqydoggy.top/2022/10/30/Test/</id>
+    <published>2022-10-30T12:11:50.000Z</published>
+    <updated>2022-10-30T12:11:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="这是我的第一篇文章，"><a href="#这是我的第一篇文章，" class="headerlink" title="这是我的第一篇文章，"></a>这是我的第一篇文章，</h2><h1 id="test"><a href="#test" class="headerlink" title="test"></a>test</h1><h2 id="test-1"><a href="#test-1" class="headerlink" title="test"></a>test</h2><h3 id="test-2"><a href="#test-2" class="headerlink" title="test"></a>test</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\js\APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://sqydoggy.top/2022/10/30/hello-world/"/>
+    <id>https://sqydoggy.top/2022/10/30/hello-world/</id>
+    <published>2022-10-30T12:11:50.000Z</published>
+    <updated>2022-10-30T12:11:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\js\APlayer.min.js&quot; class=&quot;aplayer-se</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
