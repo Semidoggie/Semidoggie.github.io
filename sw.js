@@ -1,1 +1,271 @@
-"use strict";var precacheConfig=[["/2022/10/30/Test/index.html","61a7d5e1e44f061e6fa07a56a6a247a4"],["/2022/10/30/hello-world/index.html","75b9a7c6aafa62dea027763e25ae9989"],["/2022/12/16/Life/index.html","f6f7fdc62f67731b16563f1bb2cdd092"],["/2023/04/02/Demo-1/index.html","40a5982d6b267c2423b766fb99872f3c"],["/2023/04/18/Demo-2/index.html","f0eb945c6bc8a9181a6bd8cfbcee620a"],["/404.html","ec3ce5c78a17e61c24c9d390ae25b481"],["/about/index-1.html","89300ed031c38110f4e6696131ffebc6"],["/about/index.html","91aeaefdcba430dc08a1953dee3a224e"],["/archives/2022/10/index.html","a0c705df9045b448b23fed63ffd5a9a4"],["/archives/2022/12/index.html","7e70d758777f6adce960421fe2b766df"],["/archives/2022/index.html","86b83d9aaf482c25b16829930cee0f1b"],["/archives/2023/04/index.html","e56b7bcb777acb996b6b6b34fb4332fe"],["/archives/2023/index.html","544c650cffaebcac65bb0c45b4c02542"],["/archives/index.html","ebbad53ed54b9428815251a6a35fcbf6"],["/categories/Maybe-study/index.html","e1b1f28ef65732268d5f0a72de98a0e2"],["/categories/index.html","d9e2b6eac7b3f86afee0739d4915449d"],["/comments/index.html","7f2d863736cf2a50c8bb14e32e2a0b40"],["/css/APlayer.min.css","fbe994054426fadb2dff69d824c5c67a"],["/css/hbe.style.css","a8bc819e01e001d3bc6ae03a2afad957"],["/css/index.css","73e8f7b99427147312f22585a794df15"],["/css/personal/custom.css","8a1f051036db45d05f25e59dd5bfacd0"],["/css/personal/picture.css","3d57ebf5aeed343a247a82c156d0fd18"],["/css/personal/progress_bar.css","75ee841f50186cf741ee00392ef3d9a5"],["/css/var.css","d41d8cd98f00b204e9800998ecf8427e"],["/image/avator.jpg","d3c230704a7b42443f4c79473e51c23c"],["/image/banner.jpg","42a3131ea52cd7e1b75da19e4c094f31"],["/image/banner_1.jpg","6c6edbbabf7d3bbc2cf8693af16b6c07"],["/image/browser_tab.jpg","399b493b717418e4c158f36deb0d3849"],["/image/default_cover.jpg","72601a53b17ca7144b4f4b83233fd28c"],["/img/404.jpg","4ef3cfb882b6dd4128da4c8745e9a507"],["/img/favicon.png","7a8c47cb5a2149c1a1af21e90ecd9ca7"],["/img/friend_404.gif","68af0be9d22722e74665ef44dd532ba8"],["/index.html","8cc86ad9c4b6698087079cfbebd54f9e"],["/js/APlayer.min.js","8f1017e7a73737e631ff95fa51e4e7d7"],["/js/Meting.min.js","bfac0368480fd344282ec018d28f173d"],["/js/main.js","b28662bf81abe2838d20faf2980f0034"],["/js/personal/runtime.js","ee85158b3ade8e51635f055c0f3b052d"],["/js/search/algolia.js","308de383b932f321e04751fd1f79cffb"],["/js/search/local-search.js","149fcc60c1de0a818e111978d01cbd87"],["/js/tw_cn.js","58cb9443474ea5d84a1c4ac806c8b4b7"],["/js/utils.js","24971090b8b1bd5d3f538d414e270fd3"],["/lib/hbe.js","4a7e94ac7224adfce4b0572ca5c57fef"],["/link/index.html","9624443a9de730ca26dc8a16022de88c"],["/movies/index.html","ad722d65e3bfdd05472d600c14a72f19"],["/music/index.html","3a4281c2fa28509a6f30473acb3787be"],["/sw-register.js","bbdc3e1e704f26e5be2884925abc7ebc"],["/tags/index.html","d1c284690a50eabd66ddcf2eeff2ee3a"],["/tags/作为日记加密/index.html","9dc57a453a042c40a42844ce592b2c78"]],cacheName="sw-precache-v3--"+(self.registration?self.registration.scope:""),firstRegister=1,ignoreUrlParametersMatching=[/^utm_/],addDirectoryIndex=function(e,a){var t=new URL(e);return"/"===t.pathname.slice(-1)&&(t.pathname+=a),t.toString()},cleanResponse=function(e){return e.redirected?("body"in e?Promise.resolve(e.body):e.blob()).then((function(a){return new Response(a,{headers:e.headers,status:e.status,statusText:e.statusText})})):Promise.resolve(e)},createCacheKey=function(e,a,t,n){var c=new URL(e);return n&&c.pathname.match(n)||(c.search+=(c.search?"&":"")+encodeURIComponent(a)+"="+encodeURIComponent(t)),c.toString()},isPathWhitelisted=function(e,a){if(0===e.length)return!0;var t=new URL(a).pathname;return e.some((function(e){return t.match(e)}))},stripIgnoredUrlParameters=function(e,a){var t=new URL(e);return t.hash="",t.search=t.search.slice(1).split("&").map((function(e){return e.split("=")})).filter((function(e){return a.every((function(a){return!a.test(e[0])}))})).map((function(e){return e.join("=")})).join("&"),t.toString()},hashParamName=(addDirectoryIndex=function(e,a){var t=new URL(e);return"/"===t.pathname.slice(-1)&&(t.pathname+=a),t.toString()},"_sw-precache"),urlsToCacheKeys=new Map(precacheConfig.map((function(e){var a=e[0],t=e[1],n=new URL(a,self.location),c=createCacheKey(n,hashParamName,t,!1);return[n.toString(),c]})));function setOfCachedUrls(e){return e.keys().then((function(e){return e&&e.length>0&&(firstRegister=0),e.map((function(e){return e.url}))})).then((function(e){return new Set(e)}))}self.addEventListener("install",(function(e){e.waitUntil(caches.open(cacheName).then((function(e){return setOfCachedUrls(e).then((function(a){return Promise.all(Array.from(urlsToCacheKeys.values()).map((function(t){if(!a.has(t)){var n=new Request(t,{credentials:"same-origin"});return fetch(n).then((function(a){if(!a.ok)throw new Error("Request for "+t+" returned a response with status "+a.status);return cleanResponse(a).then((function(a){return e.put(t,a)}))}))}})))}))})).then((function(){return self.skipWaiting()})))})),self.addEventListener("activate",(function(e){var a=new Set(urlsToCacheKeys.values());e.waitUntil(caches.open(cacheName).then((function(e){return e.keys().then((function(t){return Promise.all(t.map((function(t){if(!a.has(t.url))return e.delete(t)})))}))})).then((function(){return self.clients.claim()})).then((function(){if(!firstRegister)return self.clients.matchAll().then((function(e){e&&e.length&&e.forEach((function(e){e.postMessage("sw.update")}))}))})))})),self.addEventListener("fetch",(function(e){if("GET"===e.request.method){var a,t=stripIgnoredUrlParameters(e.request.url,ignoreUrlParametersMatching),n="index.html";!(a=urlsToCacheKeys.has(t))&&n&&(t=addDirectoryIndex(t,n),a=urlsToCacheKeys.has(t));0,a&&e.respondWith(caches.open(cacheName).then((function(e){return e.match(urlsToCacheKeys.get(t)).then((function(e){if(e)return e;throw Error("The cached response that was expected is missing.")}))})).catch((function(a){return console.warn('Couldn\'t serve response for "%s" from cache: %O',e.request.url,a),fetch(e.request)})))}}));
+/**
+ * 自动引入模板，在原有 sw-precache 插件默认模板基础上做的二次开发
+ *
+ * 因为是自定导入的模板，项目一旦生成，不支持随 sw-precache 的版本自动升级。
+ * 可以到 Lavas 官网下载 basic 模板内获取最新模板进行替换
+ *
+ */
+
+/* eslint-disable */
+
+'use strict';
+
+var precacheConfig = [["/2022/10/30/Test/index.html","1d9584181bf2fe964cc6ad99e12cf9c7"],["/2022/10/30/hello-world/index.html","d42fb5f8aa6695bbaa978bd1193923c7"],["/2022/12/16/Life/index.html","895db65e6ccf8b4640f57dc622056054"],["/2023/04/02/Demo-1/index.html","6c1713ea680007d4f4f514199066d7bf"],["/2023/04/18/Demo-2/index.html","2a414c3a625f910d848fb32ce5222a42"],["/404.html","c2a73b4f12472c75b6fb1d43b0b502db"],["/about/index-1.html","d25ac0a44000e78bd9bc81cbe58d9d48"],["/about/index.html","390426715fb854146102c4c483bf1bdc"],["/archives/2022/10/index.html","a2e69f8783ef0e7647a3bd4cff348c2b"],["/archives/2022/12/index.html","13d557c6902ee3b4e40ab9103b46e199"],["/archives/2022/index.html","f76f5df0205aa4ebec8f849a1e94c741"],["/archives/2023/04/index.html","3b2cfb061e1b63f9d92f09c613bb1522"],["/archives/2023/index.html","6436ff380f5a9dd6ad11685199519e08"],["/archives/index.html","bfeb43852a1a57dcd8e4f9c1e3dd26ac"],["/categories/Maybe-study/index.html","03fdd821bbde72e34489bc82683c5be6"],["/categories/index.html","f7d6ae90c3b5b18ce0655dd725ea2ad3"],["/comments/index.html","b6b642fedfc1e6fdee251c0da99ac54a"],["/css/APlayer.min.css","e1fbeb84b889055ca44f8cfbe96111b7"],["/css/hbe.style.css","0e364acc009058cdc3674b3f6c7e89e5"],["/css/index.css","e3acd4b09ceb725f2a28bcc964214686"],["/css/personal/custom.css","8453b8bec9dfa0f49091e4ba0b74610e"],["/css/personal/picture.css","5de087225e0e9eaa08016a2b151ab570"],["/css/personal/progress_bar.css","960b4844202d6ce589cd4eb2c2bd11bb"],["/css/var.css","d41d8cd98f00b204e9800998ecf8427e"],["/image/avator.jpg","d3c230704a7b42443f4c79473e51c23c"],["/image/banner.jpg","42a3131ea52cd7e1b75da19e4c094f31"],["/image/banner_1.jpg","6c6edbbabf7d3bbc2cf8693af16b6c07"],["/image/browser_tab.jpg","399b493b717418e4c158f36deb0d3849"],["/image/default_cover.jpg","72601a53b17ca7144b4f4b83233fd28c"],["/img/404.jpg","4ef3cfb882b6dd4128da4c8745e9a507"],["/img/favicon.png","7a8c47cb5a2149c1a1af21e90ecd9ca7"],["/img/friend_404.gif","68af0be9d22722e74665ef44dd532ba8"],["/index.html","a6515d328216973ea4e5fdaeb711dbe8"],["/js/APlayer.min.js","8f1017e7a73737e631ff95fa51e4e7d7"],["/js/Meting.min.js","bfac0368480fd344282ec018d28f173d"],["/js/main.js","c0b348c16e2170bd8d6dedecdec5d7cd"],["/js/personal/runtime.js","693c84f87c99a4705de01a42f404f8e8"],["/js/search/algolia.js","490ac3474717299789d089b966a95d33"],["/js/search/local-search.js","9a3fa909a665a2ea5c2717e91d4961bb"],["/js/tw_cn.js","4e8419a2b011e14a238a8d2b77a1268d"],["/js/utils.js","30eb8ecce3a0f0e0e67582c7a589212b"],["/lib/hbe.js","bbf3e394ae37f1ddc8f1095f78a1eac4"],["/link/index.html","638578d28b34be75d353f26d283353d0"],["/movies/index.html","fed17216be80694471c69e2e68ae9669"],["/music/index.html","a4e6c5c2575dd18919a69e660039f2b5"],["/sw-register.js","4a4791cb44fd7ed87391d87137d7cc58"],["/tags/index.html","78956a3d23fc412a09a4f4b5d36555cb"],["/tags/作为日记加密/index.html","474cb51034ced670ce248ac257662c87"]];
+var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
+var firstRegister = 1; // 默认1是首次安装SW， 0是SW更新
+
+
+var ignoreUrlParametersMatching = [/^utm_/];
+
+
+var addDirectoryIndex = function (originalUrl, index) {
+    var url = new URL(originalUrl);
+    if (url.pathname.slice(-1) === '/') {
+        url.pathname += index;
+    }
+    return url.toString();
+};
+
+var cleanResponse = function (originalResponse) {
+    // 如果没有重定向响应，不需干啥
+    if (!originalResponse.redirected) {
+        return Promise.resolve(originalResponse);
+    }
+
+    // Firefox 50 及以下不知处 Response.body 流, 所以我们需要读取整个body以blob形式返回。
+    var bodyPromise = 'body' in originalResponse ?
+        Promise.resolve(originalResponse.body) :
+        originalResponse.blob();
+
+    return bodyPromise.then(function (body) {
+        // new Response() 可同时支持 stream or Blob.
+        return new Response(body, {
+            headers: originalResponse.headers,
+            status: originalResponse.status,
+            statusText: originalResponse.statusText
+        });
+    });
+};
+
+var createCacheKey = function (originalUrl, paramName, paramValue,
+    dontCacheBustUrlsMatching) {
+
+    // 创建一个新的URL对象，避免影响原始URL
+    var url = new URL(originalUrl);
+
+    // 如果 dontCacheBustUrlsMatching 值没有设置，或是没有匹配到，将值拼接到url.serach后
+    if (!dontCacheBustUrlsMatching ||
+        !(url.pathname.match(dontCacheBustUrlsMatching))) {
+        url.search += (url.search ? '&' : '') +
+            encodeURIComponent(paramName) + '=' + encodeURIComponent(paramValue);
+    }
+
+    return url.toString();
+};
+
+var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+    // 如果 whitelist 是空数组，则认为全部都在白名单内
+    if (whitelist.length === 0) {
+        return true;
+    }
+
+    // 否则逐个匹配正则匹配并返回
+    var path = (new URL(absoluteUrlString)).pathname;
+    return whitelist.some(function (whitelistedPathRegex) {
+        return path.match(whitelistedPathRegex);
+    });
+};
+
+var stripIgnoredUrlParameters = function (originalUrl,
+    ignoreUrlParametersMatching) {
+    var url = new URL(originalUrl);
+    // 移除 hash; 查看 https://github.com/GoogleChrome/sw-precache/issues/290
+    url.hash = '';
+
+    url.search = url.search.slice(1) // 是否包含 '?'
+        .split('&') // 分割成数组 'key=value' 的形式
+        .map(function (kv) {
+            return kv.split('='); // 分割每个 'key=value' 字符串成 [key, value] 形式
+        })
+        .filter(function (kv) {
+            return ignoreUrlParametersMatching.every(function (ignoredRegex) {
+                return !ignoredRegex.test(kv[0]); // 如果 key 没有匹配到任何忽略参数正则，就 Return true
+            });
+        })
+        .map(function (kv) {
+            return kv.join('='); // 重新把 [key, value] 格式转换为 'key=value' 字符串
+        })
+        .join('&'); // 将所有参数 'key=value' 以 '&' 拼接
+
+    return url.toString();
+};
+
+
+var addDirectoryIndex = function (originalUrl, index) {
+    var url = new URL(originalUrl);
+    if (url.pathname.slice(-1) === '/') {
+        url.pathname += index;
+    }
+    return url.toString();
+};
+
+var hashParamName = '_sw-precache';
+var urlsToCacheKeys = new Map(
+    precacheConfig.map(function (item) {
+        var relativeUrl = item[0];
+        var hash = item[1];
+        var absoluteUrl = new URL(relativeUrl, self.location);
+        var cacheKey = createCacheKey(absoluteUrl, hashParamName, hash, false);
+        return [absoluteUrl.toString(), cacheKey];
+    })
+);
+
+function setOfCachedUrls(cache) {
+    return cache.keys().then(function (requests) {
+        // 如果原cacheName中没有缓存任何收，就默认是首次安装，否则认为是SW更新
+        if (requests && requests.length > 0) {
+            firstRegister = 0; // SW更新
+        }
+        return requests.map(function (request) {
+            return request.url;
+        });
+    }).then(function (urls) {
+        return new Set(urls);
+    });
+}
+
+self.addEventListener('install', function (event) {
+    event.waitUntil(
+        caches.open(cacheName).then(function (cache) {
+            return setOfCachedUrls(cache).then(function (cachedUrls) {
+                return Promise.all(
+                    Array.from(urlsToCacheKeys.values()).map(function (cacheKey) {
+                        // 如果缓存中没有匹配到cacheKey，添加进去
+                        if (!cachedUrls.has(cacheKey)) {
+                            var request = new Request(cacheKey, { credentials: 'same-origin' });
+                            return fetch(request).then(function (response) {
+                                // 只要返回200才能继续，否则直接抛错
+                                if (!response.ok) {
+                                    throw new Error('Request for ' + cacheKey + ' returned a ' +
+                                        'response with status ' + response.status);
+                                }
+
+                                return cleanResponse(response).then(function (responseToCache) {
+                                    return cache.put(cacheKey, responseToCache);
+                                });
+                            });
+                        }
+                    })
+                );
+            });
+        })
+            .then(function () {
+            
+            // 强制 SW 状态 installing -> activate
+            return self.skipWaiting();
+            
+        })
+    );
+});
+
+self.addEventListener('activate', function (event) {
+    var setOfExpectedUrls = new Set(urlsToCacheKeys.values());
+
+    event.waitUntil(
+        caches.open(cacheName).then(function (cache) {
+            return cache.keys().then(function (existingRequests) {
+                return Promise.all(
+                    existingRequests.map(function (existingRequest) {
+                        // 删除原缓存中相同键值内容
+                        if (!setOfExpectedUrls.has(existingRequest.url)) {
+                            return cache.delete(existingRequest);
+                        }
+                    })
+                );
+            });
+        }).then(function () {
+            
+            return self.clients.claim();
+            
+        }).then(function () {
+                // 如果是首次安装 SW 时, 不发送更新消息（是否是首次安装，通过指定cacheName 中是否有缓存信息判断）
+                // 如果不是首次安装，则是内容有更新，需要通知页面重载更新
+                if (!firstRegister) {
+                    return self.clients.matchAll()
+                        .then(function (clients) {
+                            if (clients && clients.length) {
+                                clients.forEach(function (client) {
+                                    client.postMessage('sw.update');
+                                })
+                            }
+                        })
+                }
+            })
+    );
+});
+
+
+
+    self.addEventListener('fetch', function (event) {
+        if (event.request.method === 'GET') {
+
+            // 是否应该 event.respondWith()，需要我们逐步的判断
+            // 而且也方便了后期做特殊的特殊
+            var shouldRespond;
+
+
+            // 首先去除已配置的忽略参数及hash
+            // 查看缓存简直中是否包含该请求，包含就将shouldRespond 设为true
+            var url = stripIgnoredUrlParameters(event.request.url, ignoreUrlParametersMatching);
+            shouldRespond = urlsToCacheKeys.has(url);
+
+            // 如果 shouldRespond 是 false, 我们在url后默认增加 'index.html'
+            // (或者是你在配置文件中自行配置的 directoryIndex 参数值)，继续查找缓存列表
+            var directoryIndex = 'index.html';
+            if (!shouldRespond && directoryIndex) {
+                url = addDirectoryIndex(url, directoryIndex);
+                shouldRespond = urlsToCacheKeys.has(url);
+            }
+
+            // 如果 shouldRespond 仍是 false，检查是否是navigation
+            // request， 如果是的话，判断是否能与 navigateFallbackWhitelist 正则列表匹配
+            var navigateFallback = '';
+            if (!shouldRespond &&
+                navigateFallback &&
+                (event.request.mode === 'navigate') &&
+                isPathWhitelisted([], event.request.url)
+            ) {
+                url = new URL(navigateFallback, self.location).toString();
+                shouldRespond = urlsToCacheKeys.has(url);
+            }
+
+            // 如果 shouldRespond 被置为 true
+            // 则 event.respondWith()匹配缓存返回结果，匹配不成就直接请求.
+            if (shouldRespond) {
+                event.respondWith(
+                    caches.open(cacheName).then(function (cache) {
+                        return cache.match(urlsToCacheKeys.get(url)).then(function (response) {
+                            if (response) {
+                                return response;
+                            }
+                            throw Error('The cached response that was expected is missing.');
+                        });
+                    }).catch(function (e) {
+                        // 如果捕获到异常错误，直接返回 fetch() 请求资源
+                        console.warn('Couldn\'t serve response for "%s" from cache: %O', event.request.url, e);
+                        return fetch(event.request);
+                    })
+                );
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
+/* eslint-enable */
