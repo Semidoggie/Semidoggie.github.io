@@ -8,7 +8,7 @@
       <link href="/2023/04/18/Demo-2/"/>
       <url>/2023/04/18/Demo-2/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>看手册遇到 source sink，搜了一下查到如下</p><h2 id="灌电流和拉电流"><a href="#灌电流和拉电流" class="headerlink" title="灌电流和拉电流"></a>灌电流和拉电流</h2><p>灌电流（sink current）对一个端口而言，如果电流方向是向其内部流动的则是“灌电流”，比如一个IO通过一个电阻和一个LED连接至VCC，当该IO输出为逻辑0时能不能点亮LED，去查该器件手册中sink current参数。</p><p>拉电流（source current）对一个端口而言，如果电流方向是向其外部流动的则是“拉电流”，比如一个IO通过一个电阻和一个LED连至GND，当该IO输出为逻辑1时能不能点亮LED，去查该器件手册中sourcing current参数。</p><p>拉电流和灌电流是衡量电路输出驱动能力（注意：拉、灌都是对输出端而言的，所以是驱动能力）的参数，这种说法一般用在数字电路中。</p><p>暂时摘记这么多，参考csdn链接 <a href="https://blog.csdn.net/huangmaiqiu2594/article/details/81333481">Source(拉电流) Sink（灌电流）详解</a><br><a id="jump_8"></a></p>]]></content>
       
       
       <categories>
