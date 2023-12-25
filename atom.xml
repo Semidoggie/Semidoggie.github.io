@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Doggy&#39;s blog</title>
+  <title>Semidoggie</title>
   
-  <subtitle>present</subtitle>
+  <subtitle>blog</subtitle>
   <link href="https://semidoggie.top/atom.xml" rel="self"/>
   
   <link href="https://semidoggie.top/"/>
@@ -10,7 +10,7 @@
   <id>https://semidoggie.top/</id>
   
   <author>
-    <name>Doggy</name>
+    <name>Semidoggie</name>
     
   </author>
   
