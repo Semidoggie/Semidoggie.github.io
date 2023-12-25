@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>23电赛B题</title>
+      <link href="/2023/08/22/23%E7%94%B5%E8%B5%9BB%E9%A2%98/"/>
+      <url>/2023/08/22/23%E7%94%B5%E8%B5%9BB%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h3 id="前情提要：综测寄了，最后只能止步于省一了，这里写一下个人电赛B题思路、一些细节以及遇到的问题，并没有全写出来，仅供参考，如有问题或疑问评论（"><a href="#前情提要：综测寄了，最后只能止步于省一了，这里写一下个人电赛B题思路、一些细节以及遇到的问题，并没有全写出来，仅供参考，如有问题或疑问评论（" class="headerlink" title="前情提要：综测寄了，最后只能止步于省一了，这里写一下个人电赛B题思路、一些细节以及遇到的问题，并没有全写出来，仅供参考，如有问题或疑问评论（"></a>前情提要：综测寄了，最后只能止步于省一了，这里写一下个人电赛B题思路、一些细节以及遇到的问题，并没有全写出来，仅供参考，如有问题或疑问评论（</h3><h3 id="B题题目与要求："><a href="#B题题目与要求：" class="headerlink" title="B题题目与要求："></a>B题题目与要求：</h3><p>（PS：虽然是有题目的，这里还是总结一下）</p><ul><li><strong>题目</strong>：同轴电缆长度与终端负载检测装置（禁用摄像头、传感器等器件）</li><li><strong>要求</strong>：<ul><li>装置要求：不大于6V单电源供电；可以显示工作状态、电缆长度、负载类型、负载参数；一键启动；单次检测时间不超过5s</li><li>测量内容：同轴电缆长度20m内任意值，可测量长度越短分数越高；负载类型，包括空载（开路），电阻，电容；电阻阻值（10Ω-30Ω）、电容容值（100pF-300pF）。</li><li>误差要求：长度相对误差的绝对值小于1%；电容电阻值误差小于10%<br>（这里其实有个额外要求，原话是这样的：装置应包括信号源和测量处理电路两部分。根据测量方法采用合适的激励信号，在电缆始端测量入射、反射等信号并进行处理，计算所需检测的参数）</li></ul></li></ul><h3 id="方案选择、个人心路历程"><a href="#方案选择、个人心路历程" class="headerlink" title="方案选择、个人心路历程"></a>方案选择、个人心路历程</h3><h4 id="方案："><a href="#方案：" class="headerlink" title="方案："></a>方案：</h4><ol><li>NE555、或其他稳定的方波发生电路，信号输入，经传输线反射回来，两个方波信号叠加，简单理解就是0、1信号之间互相串扰叠加，就会出现0、1、2这三种状态，计算好信号频率占空比，根据 $λ&#x3D;c&#x2F;f$ 算得波长</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Maybe study </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>电路问题_2</title>
       <link href="/2023/04/18/Demo-2/"/>
       <url>/2023/04/18/Demo-2/</url>
