@@ -4,6 +4,45 @@
   
     
     <entry>
+      <title>拉扎维学习记录</title>
+      <link href="/2023/12/29/%E6%8B%89%E6%89%8E%E7%BB%B4%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+      <url>/2023/12/29/%E6%8B%89%E6%89%8E%E7%BB%B4%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="模拟CMOS集成电路设计（拉扎维）"><a href="#模拟CMOS集成电路设计（拉扎维）" class="headerlink" title="模拟CMOS集成电路设计（拉扎维）"></a>模拟CMOS集成电路设计（拉扎维）</h1><h2 id="额外一些记录"><a href="#额外一些记录" class="headerlink" title="额外一些记录"></a>额外一些记录</h2><p>LVDS：低压差分信号<br>CML：电流模式逻辑<br>SerDes：串并转换&#x2F;并串转换</p><h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="2-1-MOS器件物理"><a href="#2-1-MOS器件物理" class="headerlink" title="2.1 MOS器件物理"></a>2.1 MOS器件物理</h3><ol><li><p>多子少子：<br> 主要指P型&#x2F;N型半导体（衬底）中自由电子和空穴数量<br> P型自由电子多，空穴少，多子是自由电子，少子是空穴<br> N型空穴多，自由电子少，多子是空穴，少子是自由电子<br> 不论N型半导体中的自由电子，还是P型半导体中的空穴，它们都参与导电，统称为“载流子”</p></li><li><p>结构：<br> NMOS在P型硅衬底（substrate）基础上，掺杂其余部分（栅源漏）（G、S、D）</p></li><li><p>尺寸问题：<br> 多晶硅（G极）盖住的部分宽度W<br> 沟道长度$ L_{eff} $和$ L_{drawn} $，后者为特征尺寸<br> $ L_{eff} &lt; L_{drawn} $ 因为半导体工艺扩散的原因导致<br> $ .18μm $工艺指的是$ L_{drawn} ≥ 0.18μm $<br> $ W $ 栅宽<br> $ L_{drawn} $ 栅长<br> $ t_{ox} $ 多晶硅厚度 尺寸大致在几个$ nm $级别<br> $ N_{sub} $ 衬底的掺杂浓度；掺杂半导体特点：载流子浓度由掺杂决定</p><p> 工艺进步：$ L_{drawn} $减小，$ t_{ox} $减小，$ V_{DD} $减小</p></li><li><p>衬底<br> <img src="C:\Users\Public\Documents\Hexo-Blog\source\image\Text\razavi\1.png" alt="Sub potential influences MOS characteristics"><br> MOS事对称器件，S和D可交换，BJT非对称C和E不可交换<br> P管S高，N管S低（电压）</p><p> NMOS衬底接最低电位（GND）PMOS衬底接最高电位（VDD）</p><p> 在P衬底的基础上，在n阱（n-well）里做PMOS的工艺叫做双阱工艺（标准CMOS工艺）</p></li><li><p>串扰（cross-talk）</p><p> 衬底相连，但是有一定电阻，一个晶体管的一点扰动会影响到另一只晶体管的工作。</p><p> 解决方案：深n阱工艺：<br> <img src="/image.png" alt="Alt text1"></p></li><li><p>MOS和BJT做开关的区别</p><p> MOS的G对两端绝缘，BJT的B会对E有电流流出。</p></li><li><p>threshold voltage（阈值电压$ V_{TH} $）</p></li><li><p>CMOS也叫$ VCCS $ （压控电流源）</p></li><li><p>$ V_G $持续增加，形成两个电容<br> 栅氧化层电容$ C_{ox} $（通常固定电容）<br> 耗尽区的电容$ C_{dep} $（通常可变电容）</p><p> 所以对于MOS来说栅和衬底之间是两个电容的串联</p></li><li><p>$ V_{TH} $表面转型时的栅极电压<br>$$<br>V_{TH} &#x3D; Φ_{MS} + 2Φ_{F} + \frac{Q_{dep}}{C_{ox}}<br>$$<br>$ C_{ox} $为单位面积电容<br>$$<br>C_{ox}&#x3D;\frac{ε_{SiO_{2}}ε_{0}}{t_{ox}}<br>$$<br>$ t_{ox} $越小，$ V_{TH} $越小<br>$ N_{sub} $越大，$ V_{TH} $越大<br>$ T $（温度）变化，$ V_{TH} $变化，通常情况随温度升高而降低。</p></li></ol><h2 id="第十五章-振荡器"><a href="#第十五章-振荡器" class="headerlink" title="第十五章 振荡器"></a>第十五章 振荡器</h2><h3 id="15-1-概述"><a href="#15-1-概述" class="headerlink" title="15.1 概述"></a>15.1 概述</h3><ol><li>巴克豪森准则：<br> 一个负反馈电路的环路增益满足两个条件：<br> （1）. $ |H(jω_0)| &lt; ∞ $<br> （2）. $ ∠H(jω_0) &#x3D; 180° $<br> 则电路在$ ω_0 $处振荡。<br> 应用中，为了在存在温度和工艺变化的情况下确保振荡，典型地我们将选择环路增益至少2倍或3倍于所要求的值。</li></ol><h3 id="15-2-环形振荡器"><a href="#15-2-环形振荡器" class="headerlink" title="15.2 环形振荡器"></a>15.2 环形振荡器</h3><ol><li><p>由三极点的三级环形振荡器可以知道：<br>由于每级与频率有关的相移为60°以及低频信号的180°反相，每个结点的波形相对其相邻结点相位差为240°（或120°）。<br>可产生多相信号。<br>（推导略，详见拉扎维$ P_{545} $页</p></li><li></li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>毕设遇到的问题</title>
+      <link href="/2023/12/28/%E6%AF%95%E8%AE%BE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/12/28/%E6%AF%95%E8%AE%BE%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><p>$ FoM $（Figure of Merit）品质因数<br>$ FoM_T $ (Figure of Merit with Tuning Range)包含调谐范围的品质因数 单位$ dBc&#x2F;Hz $</p><blockquote><p>$$<br>FoM &#x3D;  PN - 20\lg(\frac{f_0}{Δf}) + 10\lg(\frac{P_{DC}}{1mW})<br>$$ $$<br>FoM_T &#x3D; PN - 20\lg(\frac{f_0}{Δf} \frac{FTR}{10}) + 10\lg(\frac{P_{DC}}{1mW})<br>$$</p></blockquote><p>$ FTR $ （Frequency Tuning Range）调谐范围<br>$ PN $ （Phase Noise）相位噪声<br>$ P_{DC} $ （Power）直流功耗</p><p>香农-哈特利定律：通信速率与信道带宽和信噪比成正比</p><p>摩尔定律：互补金属氧化物半导体（CMOS）工艺节点的进步使得各类电子产品以每两年缩小一倍得速度快速发展。<br>CMOS工艺与传统的砷化镓和磷化铟等III-VI族工艺相比，有低成本、小面积以及高集成度的优势。<br>所以CMOS工艺下的毫米波振荡器被广泛应用。</p><p>谐振腔：谐振腔是在微波频率下工作的谐振元件，它是一个任意形状的由导电壁（或导磁壁）包围的，并能在其中形成电磁振荡的介质区域，<u><strong>它具有储存电磁能及选择一定频率信号的特性。和低频LC振荡回路相似</strong></u>，它在微波技术中有广泛的应用。如在各种微波振荡器中用它作为能量交换和选频元件，在微波倍频和放大器中用作选频元件，微波谐振腔还可直接构成微波波长计，微波滤波器用于微波测量和微波通讯中。高Q谐振腔在雷达设备中用作回波箱，用以检测雷达发射和接收系统的性能等。</p><p>闪烁噪声（$ 1&#x2F;f $噪声）：由于半导体晶体表面污染及晶体缺陷，不断产生或整合载流子而产生的噪声。大多集中在低频区域。双极芯片所受的干扰比场效应管大。功率谱密度随频率降低而增大（成反比）。高频工作时可忽略闪烁噪声。</p><p>多核VCO：通过耦合N个完全相同的VCO振荡核心，在不牺牲调谐范围的情况下将相位噪声降低$ 10\lg(N) $dB。但同时，由于振荡核心的增加，N核VCO的功耗也将相应提高N倍，这使VCO的整体FoM值并没有得到改善</p><p>多峰值谐振腔：通过变压器和电容的组合实现多峰值谐振腔，即在差模和共模下同时拥有多个谐振频率。在振荡器中使用可以通过谐波控制来优化输出波形，减小相位噪声，也可以通过高耦合系数来扩大工作频率范围。</p><p>耦合系数：在电路中，为表示元件间耦合的松紧程度，把两电感元件间实际的互感（绝对值）与其最大极限值之比定义为耦合系数。<br>耦合系数的应用：在电力变压器中，为了有效地传输功率，采用紧密耦合，k值接近于1，而在无线电和通信方面，要求适当的、较松的耦合时，就需要调节两个线圈的相互位置。有的时候为了避免耦合作用，就应合理布置线圈的位置，使之远离，或使两线圈的轴线相互垂直，或采用磁屏蔽方法等。<br>耦合系数$ k $</p><blockquote><p>$$<br>k &#x3D; \frac{|M|}{\sqrt{L_1L_2}}<br>$$</p></blockquote><p>差分对：</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>毕设</title>
+      <link href="/2023/12/25/%E6%AF%95%E8%AE%BE/"/>
+      <url>/2023/12/25/%E6%AF%95%E8%AE%BE/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h1 id="毫米波多相位振荡器"><a href="#毫米波多相位振荡器" class="headerlink" title="毫米波多相位振荡器"></a>毫米波多相位振荡器</h1><p>振荡器方面：<br>行波振荡器（TWO），CMOS振荡器<br>CMOS振荡器：驰张振荡器（多谐振荡器），共振振荡器<br>驰张振荡器以环形振荡器为代表，共振振荡器又分为LC振荡器和分布式振荡器等</p><h2 id="驰张振荡器"><a href="#驰张振荡器" class="headerlink" title="驰张振荡器"></a>驰张振荡器</h2><ul><li>非稳态多谐振荡器（Astable Multivibrator）：不需要输入信号来触发（自激）。对于输出信号，有两种状态，但不管哪个状态都不稳定，总是从一个状态转变到另一个状态，一张一弛，所以又称为“弛张振荡器”（Relaxation Oscillator）。</li><li>单稳态多谐振荡器（Monostable Multivibrator）：需要输入信号来触发。触发后，输出信号处于非稳态，但持续一段时间后还是会回到稳态。这种电路可以用于延时、消除抖动等。</li><li>双稳态多谐振荡器（Bistable Multivibrator）：需要输入信号来触发。触发后，输出信号由一个稳态转变到另一个稳态。这种电路是Memory的基础，有待日后分析。</li><li>环形振荡器没有高品质因数的谐振腔，相位噪声差，易受工艺电压温度变化的影响，常用于低频段。</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>23电赛B题</title>
       <link href="/2023/08/22/23%E7%94%B5%E8%B5%9BB%E9%A2%98/"/>
       <url>/2023/08/22/23%E7%94%B5%E8%B5%9BB%E9%A2%98/</url>
